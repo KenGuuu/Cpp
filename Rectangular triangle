@@ -1,0 +1,33 @@
+//This program asks you to enter value of each side of the triangle and then sends answer if it's rectangular triangle or even a triangle
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int FirstCathetusOfTriangle;
+int SecondCathetusOfTriangle;
+int HypotenuseOfTriangle;
+
+
+    cout << "Enter one cathetus of triangle" << endl;
+    cin >> FirstCathetusOfTriangle;
+    cout << "Enter another cathetus of triangle" << endl;
+    cin >> SecondCathetusOfTriangle;
+    cout << "Enter hypotenuse of triangle" << endl;
+    cin >> HypotenuseOfTriangle;
+
+if(((FirstCathetusOfTriangle*FirstCathetusOfTriangle)+(SecondCathetusOfTriangle*SecondCathetusOfTriangle)==(HypotenuseOfTriangle*HypotenuseOfTriangle)))
+{
+    cout << "This is rectangular triangle :)";
+}
+else if (FirstCathetusOfTriangle+SecondCathetusOfTriangle<HypotenuseOfTriangle||FirstCathetusOfTriangle+HypotenuseOfTriangle<SecondCathetusOfTriangle||SecondCathetusOfTriangle+HypotenuseOfTriangle<FirstCathetusOfTriangle)
+{
+    cout << "It's not even a triangle!!!!!";
+}
+else
+{
+    cout << "This is not a rectangular triangle ;(";
+
+}
+ return 0;
+}
