@@ -20,7 +20,7 @@ if(((FirstCathetusOfTriangle*FirstCathetusOfTriangle)+(SecondCathetusOfTriangle*
 {
     cout << "This is rectangular triangle :)";
 }
-else if (FirstCathetusOfTriangle+SecondCathetusOfTriangle<HypotenuseOfTriangle||FirstCathetusOfTriangle+HypotenuseOfTriangle<SecondCathetusOfTriangle||SecondCathetusOfTriangle+HypotenuseOfTriangle<FirstCathetusOfTriangle)
+else if (FirstCathetusOfTriangle+SecondCathetusOfTriangle<=HypotenuseOfTriangle||FirstCathetusOfTriangle+HypotenuseOfTriangle<=SecondCathetusOfTriangle||SecondCathetusOfTriangle+HypotenuseOfTriangle<=FirstCathetusOfTriangle)
 {
     cout << "It's not even a triangle!!!!!";
 }
