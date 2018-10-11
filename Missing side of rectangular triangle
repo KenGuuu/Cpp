@@ -1,0 +1,40 @@
+//This program asks you to enter the value of each side of triangle, then sends answer. It tells you the the value of missing side of rectangular triangle. 
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    
+    double FirstCathetusOfTriangle;
+    double SecondCathetusOfTriangle;
+    double HypotenuseOfTriangle;
+
+
+    cout << "Enter first cathetus of triangle, if unknown enter 0" << endl;
+    cin >> FirstCathetusOfTriangle;
+    cout << "Enter second cathetus of triangle, if unknown enter 0"<< endl;
+    cin >> SecondCathetusOfTriangle;
+    cout << "Enter hypotenuse of triangle, if unknown enter 0" << endl;
+    cin >> HypotenuseOfTriangle;
+
+
+    
+    if(FirstCathetusOfTriangle == 0)
+    {
+        cout << "\n";    
+        cout << sqrt(pow(HypotenuseOfTriangle,2)-pow(SecondCathetusOfTriangle,2));
+    }
+    else if (SecondCathetusOfTriangle == 0)
+    {
+        cout << "\n";    
+        cout << sqrt(pow(HypotenuseOfTriangle,2)-pow(FirstCathetusOfTriangle,2));
+    }
+    else
+    {
+        cout << "\n";
+        cout << sqrt(pow(FirstCathetusOfTriangle,2)+pow(SecondCathetusOfTriangle,2));
+    }
+
+ return 0;   
+}
