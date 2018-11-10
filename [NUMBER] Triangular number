@@ -1,0 +1,26 @@
+//this program prints triangular number not higher than given range 
+#include <iostream>
+using namespace std;
+int main()
+{
+
+int a=1;
+int range;
+    cout << "Enter a range to which triangular numbers should be printed:" << " " << endl;
+        cin >> range;
+    if(range>0)
+    {
+    for(int i=0; a+i<=range; i++)
+    {
+        cout << a+i << "," << " ";
+        a=a+i;
+        a+=1;
+    }
+    }
+    else
+    {
+        cout << "Enter a number greater than 0";
+    }
+
+    return 0;
+}
