@@ -1,0 +1,21 @@
+//this program prints n-th trianglar number
+#include <iostream>
+using namespace std;
+int main()
+{
+
+int n;
+    cout << "Enter a n-th number that should be printed:" << " " << endl;
+        cin >> n;
+    if(n>0)
+    {
+        cout << n << "th triangular number is: " << (n*(n+1))/2;
+
+    }
+    else
+    {
+        cout << "Enter a number greater than 0";
+    }
+
+    return 0;
+}
