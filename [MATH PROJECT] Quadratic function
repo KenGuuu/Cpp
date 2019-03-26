@@ -1,0 +1,55 @@
+#include "pch.h"
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double a, b, c;
+
+int main()
+{
+
+	double delta = ((pow(b, 2)) - (4*a*c));
+	cin >> a >> b >> c;
+	double x, x1, x2;
+
+	cout.precision(2);
+	if (a == 0)
+	{
+		if (b == 0)
+		{
+			if (c == 0)
+			{
+				cout << "NWR";
+			}
+			else
+			{
+				cout << "BR";
+			}
+		}
+		else
+		{
+			x = ((-c) / b);
+			cout << "x = " << fixed << x;
+		}
+	}
+	if (delta > 0)
+	{
+		x1 = (((-b) - sqrt(delta)) / 2 * a);
+		x2 = (((-b) + sqrt(delta)) / 2 * a);
+		cout << "x1 = " << fixed << x1 << ", " << "x2 = " << fixed << x2;
+	}
+	else
+	{
+		if (delta == 0)
+		{
+			x = ((-b) / 2 * a);
+			cout << "x = " << fixed << x;
+		}
+		else
+		{
+			cout << "BR";
+		}
+	}
+}
+
