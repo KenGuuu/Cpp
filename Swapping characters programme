@@ -1,0 +1,30 @@
+//This program swap letters staying to each other (for example 1st letter and 2nd letter, 3rd letter and 4th letter etc...). If word is odd, swap last and first letter
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int tmp;
+    string word;
+
+    cin >> word;
+
+    for(int i=0; i<word.length()-1; i++)
+    {
+        tmp=word[i];
+        word[i]=word[i+1];
+        word[i+1]=tmp;
+        i+=1;
+    }
+
+    if(word.length()%2!=0)
+    {
+        tmp = word[word.length()-1];
+        word[word.length()-1] = word[0];
+        word[0] = tmp;
+    }
+
+    cout << word;
+    return 0;
+}
