@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int ax, ay, bx, by, cx, cy;
+
+int main(){
+
+    int wiekszyx = 0; ///Mniejszyx i wiekszyx sluzy do okreslenia czy punkt C znajduje sie miedzy punktami A i B
+    int mniejszyx;  ///Aby sie znajdowal, punkt C musi byc miedzy wspolrzedna Ax i Bx
+
+    cin >> ax >> ay >> bx >> by >> cx >> cy;
+    if(ax>bx){
+        wiekszyx = ax;
+        mniejszyx = bx;
+    } else {
+        wiekszyx = bx;
+        mniejszyx = ax;
+    }
+    int det = (ax*by)+(ay*cx)+(bx*cy)-(by*cx)-(ax*cy)-(ay*bx);
+
+    if(det==0 && cx>mniejszyx && cx<wiekszyx){ 
+        cout << "TAK";
+    } else {
+        cout << "NIE";
+    }
+
+
+    return 0;
+}
